@@ -304,7 +304,7 @@ typedef struct Rect3 {
 	Vec3D d;
 } Rect3;
 
-Bool Rect3_Overlap(Rect3 r1,Rect3 r2){
+char Rect3_Overlap(Rect3 r1,Rect3 r2){
 	return !(r1.p.x<r2.p.x-r1.d.x || r1.p.y<r2.p.y-r1.d.y || r1.p.z<r2.p.z-r1.d.z || r1.p.x>r2.p.x+r2.d.x || r1.p.y>r2.p.y+r2.d.y || r1.p.z>r2.p.z+r2.d.z);
 }
 void Rect3_Static(Rect3* r1,Rect3 r2){
